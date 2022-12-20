@@ -1,14 +1,12 @@
 
 namespace mtu {
 class Vec {
-public:
-    virtual void ShowItem();
-    
 protected:
     Vec(int dim);
     ~Vec();
-    const int mDim;
+    virtual void ShowItem();
     float& Data(unsigned int idx);
+    const int mDim;
 
 private:
     float* mData;
@@ -49,10 +47,18 @@ public:
 };
 
 
-class Mat4 {
+class Mat {
+protected:
+    Mat(int dim); 
+    const int mDim;
+    virtual void Inverse() {}
+};
+
+class Mat4 : public Mat {
 public:
     Mat4();
-    void Inverse();
+    Mat4(Vec4 v1, Vec4 v2, Vec4 v3, Vec4 v4);
+    void Inverse() override;
 
     class Vec4& operator[] (int idx);
     

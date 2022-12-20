@@ -7,4 +7,5 @@ project ("MathUtil" VERSION 1.2)
 
 add_subdirectory ("lib")
 add_subdirectory ("main")
-# add_executable (output "main/main.cpp")
+add_executable (output "main/main.cpp")
+target_link_libraries(output math_util)
