@@ -11,6 +11,12 @@
 
 #include "MathUtil.hpp"
 
+namespace {
+void TestEpsilone(double value1, double value2) {
+    assert((value1 - value2) < 0.00001);
+}
+}
+
 int main(int argc, char** argv)
 {
     // std::cout << "WANDER_CMAKE_ARG=" WANDER_CMAKE_ARG << std::endl;
@@ -26,7 +32,8 @@ int main(int argc, char** argv)
     
     
     mtu::Vec3 testVector = mtu::Vec3(5.6);
-    assert(abs(testVector.x() - 5.6f) < 0.00001);
+    TestEpsilone(testVector.x(), 5.6);
+    TestEpsilone(testVector.z(), 5.6);
     
     std::cout << "hello\n";
     for (int i = 0; i < 10; i++) {

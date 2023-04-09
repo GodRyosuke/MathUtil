@@ -4,7 +4,7 @@
 set(WANDER_CMAKE_ARG "This is Wander CMake ARG!")
 message(STATUS "This is Test Wander Cmake Message")
 message(STATUS "This is Test Project directory: ${PROJECT_SOURCE_DIR}")
-add_executable (${CMAKE_PROJECT_NAME} "main.cpp")
+add_executable (${CMAKE_PROJECT_NAME} "test.cpp")
 target_link_libraries(${CMAKE_PROJECT_NAME} math_util)
 
 add_test(NAME WanderLib COMMAND ${CMAKE_PROJECT_NAME})

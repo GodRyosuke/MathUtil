@@ -10,5 +10,5 @@ add_subdirectory ("lib")
 
 if ("${ENABLE_LIBRARY_TESTING}")
     enable_testing()
-    add_subdirectory ("main")
+    add_subdirectory ("test")
 endif()
