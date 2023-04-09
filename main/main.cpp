@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <cassert>
 // #ifndef WANDER_CMAKE_ARG
 //     #define WANDER_CMAKE_ARG "<Not Set>"
 // #endif
@@ -23,6 +23,9 @@ int main(int argc, char** argv)
         testVec.x() = 3.4f;
     }
     testVec.ShowItem();
+    
+    mtu::Vec3 testVector = mtu::Vec3(5.6);
+    assert(abs(testVector.x() - 5.6f) < 0.00001);
     
     std::cout << "hello\n";
     for (int i = 0; i < 10; i++) {
