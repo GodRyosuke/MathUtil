@@ -12,3 +12,4 @@ if ("${ENABLE_LIBRARY_TESTING}")
     enable_testing()
     add_subdirectory ("main")
 endif()
+
