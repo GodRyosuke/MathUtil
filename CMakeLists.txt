@@ -9,5 +9,6 @@ option("ENABLE_LIBRARY_TESTING" OFF)
 add_subdirectory ("lib")
 
 if ("${ENABLE_LIBRARY_TESTING}")
+    enable_testing()
     add_subdirectory ("main")
 endif()
