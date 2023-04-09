@@ -24,6 +24,7 @@ int main(int argc, char** argv)
     }
     testVec.ShowItem();
     
+    
     mtu::Vec3 testVector = mtu::Vec3(5.6);
     assert(abs(testVector.x() - 5.6f) < 0.00001);
     
