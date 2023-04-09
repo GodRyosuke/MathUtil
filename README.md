@@ -13,3 +13,5 @@ cmake -S .. -B . -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release
 cmake --build .
 ```
 
+## testing
+CTestを追加した。
