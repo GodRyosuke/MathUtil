@@ -14,4 +14,8 @@ cmake --build .
 ```
 
 ## testing
-CTestを追加した。
+CTestを追加した。実行方法は以下のようである。
+```bash
+cd /path/to/build
+ctest
+```
