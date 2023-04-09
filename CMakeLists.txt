@@ -5,7 +5,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED true)
 
 project ("MathUtil" VERSION 1.2)
 
+option("ENABLE_LIBRARY_TESTING" OFF)
 add_subdirectory ("lib")
-add_subdirectory ("main")
-add_executable (output "main/main.cpp")
-target_link_libraries(output math_util)
+
+if ("${ENABLE_LIBRARY_TESTING}")
+    add_subdirectory ("main")
+endif()
